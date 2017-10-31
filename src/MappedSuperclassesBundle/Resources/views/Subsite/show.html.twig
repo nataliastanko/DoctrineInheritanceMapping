@@ -1,0 +1,35 @@
+{% extends 'MappedSuperclassesBundle::layout.html.twig' %}
+{% block body %}
+    <h1>Subsite</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ subsite.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ subsite.name }}</td>
+            </tr>
+            <tr>
+                <th>Person</th>
+                <td>{{ subsite.person.fullname }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('subsite_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('subsite_edit', { 'id': subsite.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

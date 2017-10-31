@@ -1,0 +1,38 @@
+{% extends 'MappedSuperclassesBundle::layout.html.twig' %}
+{% block body %}
+    <h1>Subsites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for subsite in subsites %}
+            <tr>
+                <td><a href="{{ path('subsite_show', { 'id': subsite.id }) }}">{{ subsite.id }}</a></td>
+                <td>{{ subsite.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('subsite_show', { 'id': subsite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('subsite_edit', { 'id': subsite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('subsite_new') }}">Create a new subsite</a>
+        </li>
+    </ul>
+{% endblock %}

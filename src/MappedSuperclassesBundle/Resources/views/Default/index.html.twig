@@ -1,0 +1,13 @@
+{% extends 'MappedSuperclassesBundle::layout.html.twig' %}
+{% block body %}
+
+    <h2>Mapped Superclasses</h2>
+    <ul>
+        <li><a href="{{ path('person_index') }}">Person</a></li>
+        <li><a href="{{ path('document_index') }}">Document</a></li>
+        <li><a href="{{ path('subsite_index') }}">Subsite</a></li>
+    </ul>
+
+{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}

@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block bodyhtml %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                {% block body %}{% endblock %}
+            </div>
+
+            {% block breadcrumbs %}
+            <div id="next">
+                <a href="{{ path('mapped_superclasses_index') }}">Mapped Superclasses</a>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

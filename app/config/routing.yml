@@ -1,0 +1,30 @@
+mapped_superclasses_document:
+    resource: "@MappedSuperclassesBundle/Controller/DocumentController.php"
+    type:     annotation
+
+mapped_superclasses_person:
+    resource: "@MappedSuperclassesBundle/Controller/PersonController.php"
+    type:     annotation
+
+mapped_superclasses_sub_site:
+    resource: "@MappedSuperclassesBundle/Controller/SubSiteController.php"
+    type:     annotation
+
+class_table_inheritance:
+    resource: "@ClassTableInheritanceBundle/Controller/"
+    type:     annotation
+    prefix:   /class-table-inheritance
+
+single_table_inheritance:
+    resource: "@SingleTableInheritanceBundle/Controller/"
+    type:     annotation
+    prefix:   /single-table-inheritance
+
+mapped_superclasses:
+    resource: "@MappedSuperclassesBundle/Controller/"
+    type:     annotation
+    prefix:   /mapped-superclasses
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
